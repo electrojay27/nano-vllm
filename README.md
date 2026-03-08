@@ -1,3 +1,3 @@
 # Nano-vllm
 
-Learning from [https://github.com/GeeeekExplorer/nano-vllm](nano-vllm)
+Learning from [nano-vllm](https://github.com/GeeeekExplorer/nano-vllm)
