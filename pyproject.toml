@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nano-vllm"
+version = "0.1.0"
+authors = [{ name = "electroJay" }]
+license = "MIT"
+license-files = ["LICENSE"]
+readme = "README.md"
+description = "Learning from nano-vllm"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "torch>=2.4.0",
+    "triton>=3.0.0",
+    "transformers>=4.51.0",
+    "xxhash",
+]
+
+# flash-attn 需在已安装 torch 后用 --no-build-isolation 安装
+[project.optional-dependencies]
+flash = ["flash-attn"]
+
+[project.urls]
+Homepage="https://github.com/electrojay27/nano-vllm"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["nanovllm*"]
